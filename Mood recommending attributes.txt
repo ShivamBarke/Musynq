@@ -5,3 +5,17 @@ Happy songs ==> e>0.5 & v>0.5
 Relaxed songs ==> e<0.5 & v>0.5
 Angry songs ==> e>0.5 & v<0.5
 Sad songs ==> e<0.5 & v<0.5 
+
+--------------------------------------------------------------------------------------------------
+
+1. I find beauty in things around me. (Happy/Sad)
+2. I have completed today’s agenda.(Happy/Sad)
+3. Nothing seems fun anymore./ I hardly enjoy anything. (Sad/Happy)
+4. I feel like my opinion/efforts are not appreciated. (Anger)
+5. I get irritated easily. (Anger)
+6. I feel loved.(Happy/Sad)
+7. I don't feel like doing anything.  (Sad)
+8. I am feeling bored. (Sad)
+9. I’ve been feeling confident. (Happy)
+10. Recently, I have trouble with concentration.(Concentration)
+
