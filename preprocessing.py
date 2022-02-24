@@ -8,6 +8,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 # %matplotlib inline
 
+
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
@@ -51,24 +52,23 @@ def get_decade(year):
 #get data of music by year
 data['decade'] = data['year'].apply(get_decade)
 
-sns.set(rc={'figure.figsize':(11 ,6)})
-sns.countplot(data['decade'])
-sound_features = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'valence']
+# sns.set(rc={'figure.figsize':(11 ,6)})
+# sns.countplot(data['decade'])
+sound_features = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'valence', 'mode']
 
 #characterisation with different genre
-top10_genres = genre_data.nlargest(10, 'popularity')
+# top10_genres = genre_data.nlargest(10, 'popularity')
 
 
 #clustering genres with K-means
-cluster_pipeline = Pipeline([('scaler', StandardScaler()), ('kmeans', KMeans(n_clusters=10))])
-X = genre_data.select_dtypes(np.number)
-cluster_pipeline.fit(X)
-genre_data['cluster'] = cluster_pipeline.predict(X)
+# cluster_pipeline = Pipeline([('scaler', StandardScaler()), ('kmeans', KMeans(n_clusters=10))])
+# X = genre_data.select_dtypes(np.number)
+# cluster_pipeline.fit(X)
+# genre_data['cluster'] = cluster_pipeline.predict(X)
 
 #clustering songs with K-means
-def song_cluster_pipeline():
-    song_cluster_pipeline = Pipeline([('scaler', StandardScaler()),('kmeans', KMeans(n_clusters=20, verbose=False))], verbose=False)
-    return song_cluster_pipeline
+
+song_cluster_pipeline = Pipeline([('scaler', StandardScaler()),('kmeans', KMeans(n_clusters=20, verbose=False))], verbose=False)
 
 X = data.select_dtypes(np.number)
 number_cols = list(X.columns)

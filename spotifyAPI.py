@@ -1,11 +1,11 @@
 import requests
 import datetime
+import os
 
-client_id = "aacb5ba6df0b4c88abfb07dd2e317d58"
-client_secret = "e21e121b9f5145b0ae0687b5b68558f6"
+# client_id = os.environ("d04be567989d427e8ca8b0b27faa9bdc")
+# client_secret = os.environ("07721eeec6e1493f80a52f79335f1a12")
 
 class spotifyAPI(object):
-    
     client_id = None
     client_secret = None
     token_url = 'https://accounts.spotify.com/api/token'
@@ -47,7 +47,7 @@ class spotifyAPI(object):
 
         valid_request = r.status_code in range(200, 299)
         if r.status_code not in range(200, 299):
-            raise Exception("Could not authenticate client.")
+            raise Exception(f"Could not authenticate client. Status code {r.status_code}")
         data = r.json()
         now = datetime.datetime.now()
         access_token = data['access_token']
@@ -60,5 +60,5 @@ class spotifyAPI(object):
         return True, access_token
 
 
-client = spotifyAPI(client_id, client_secret)
+client = spotifyAPI(os.environ["client_id"], os.environ.get["client_secret"])
 client.perform_auth()
