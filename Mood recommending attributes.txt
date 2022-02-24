@@ -1,0 +1,7 @@
+In data.csv
+Energy = e
+Valence = v
+Happy songs ==> e>0.5 & v>0.5
+Relaxed songs ==> e<0.5 & v>0.5
+Angry songs ==> e>0.5 & v<0.5
+Sad songs ==> e<0.5 & v<0.5 
