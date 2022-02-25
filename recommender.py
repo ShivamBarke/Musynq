@@ -3,15 +3,19 @@
 
 import spotipy
 import os
+import json
 import random
 from spotipy.oauth2 import SpotifyClientCredentials
 
+
 os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
 os.environ["SPOTIPY_CLIENT_SECRET"]= "07721eeec6e1493f80a52f79335f1a12"
+os.environ["SPOTIPY_REDIRECT_URI"] = "https://www.google.com/"
 
 auth_manager = spotipy.SpotifyClientCredentials()
 
 sp = spotipy.Spotify(auth_manager = auth_manager)
+
 
 Happy = ['hip hop', 'classical',' edm' ,'blues', 'country', 'funk', 'disco','love songs',' latino',' dubstep', 'punk', 'punk-rock' , 
  'heavy metal' , 'rock', 'rock-n-roll' ,'party','synth-pop', 'salsa', 'samba' ,'guitar', 'happy','alt-rock','indie', 'indie-pop','trance']
@@ -25,6 +29,9 @@ Anger= ['reggae' ,'club', 'death -metal','drum-and-bass',' dub', 'dubstep', 'edm
 
 class Recommender():
     # Selects random song genres from above defined lists i.e happy sad angry relax
+
+    # Add duration specific songs duration > 1 min
+    
     def random_selector(list) :
         for i in range(5):
             list1 = random.choices(list, k=5)
@@ -114,5 +121,5 @@ happy = Recommender.happy_recommender()
 sad = Recommender.sad_recommender()
 anger = Recommender.anger_recommender()
 relaxed = Recommender.relaxed_recommender()
-print(happy, sad , anger , relaxed)
+
 

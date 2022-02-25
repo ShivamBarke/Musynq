@@ -1,0 +1,2 @@
+this is a code snippet for user authentication in JS and returns Name Emailid number of followers etc
+http://jsfiddle.net/JMPerez/62wafrm7/
