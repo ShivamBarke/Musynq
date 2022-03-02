@@ -1,0 +1,3 @@
+in recommender.py 
+    recommender works without passing a username
+    can access the userid with spotipy

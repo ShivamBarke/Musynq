@@ -19,3 +19,799 @@ Sad songs ==> e<0.5 & v<0.5
 9. I’ve been feeling confident. (Happy)
 10. Recently, I have trouble with concentration.(Concentration)
 
+--------------------------------------------------------------------------------------------------
+
+# SAMPLE OUTPUT FROM THE Recommender.happy_recommender()
+
+[
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/4wLXwxDeWQ8mtUIRPxGiD6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/4wLXwxDeWQ8mtUIRPxGiD6",
+                    "id": "4wLXwxDeWQ8mtUIRPxGiD6",
+                    "name": "Marc Anthony",
+                    "type": "artist",
+                    "uri": "spotify:artist:4wLXwxDeWQ8mtUIRPxGiD6"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/6LIqj7VIJB3K54NBycFxSe"
+            },
+            "href": "https://api.spotify.com/v1/albums/6LIqj7VIJB3K54NBycFxSe",
+            "id": "6LIqj7VIJB3K54NBycFxSe",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2731dff9c7ceebb43b8fbbd4885",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e021dff9c7ceebb43b8fbbd4885",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048511dff9c7ceebb43b8fbbd4885",
+                    "width": 64
+                }
+            ],
+            "name": "Contra La Corriente",
+            "release_date": "1997-01-01",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:6LIqj7VIJB3K54NBycFxSe"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4wLXwxDeWQ8mtUIRPxGiD6"
+                },
+                "href": "https://api.spotify.com/v1/artists/4wLXwxDeWQ8mtUIRPxGiD6",
+                "id": "4wLXwxDeWQ8mtUIRPxGiD6",
+                "name": "Marc Anthony",
+                "type": "artist",
+                "uri": "spotify:artist:4wLXwxDeWQ8mtUIRPxGiD6"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 309040,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USUL10300682"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/5qn8vssrlc5g1BcTpkA1pT"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5qn8vssrlc5g1BcTpkA1pT",
+        "id": "5qn8vssrlc5g1BcTpkA1pT",
+        "is_local": false,
+        "is_playable": true,
+        "name": "No Sabes Como Duele",
+        "popularity": 47,
+        "preview_url": null,
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:5qn8vssrlc5g1BcTpkA1pT"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2T1yhT2K3iSI8vwAdOS9O0"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2T1yhT2K3iSI8vwAdOS9O0",
+                    "id": "2T1yhT2K3iSI8vwAdOS9O0",
+                    "name": "Conjunto Cl\u00e1sico",
+                    "type": "artist",
+                    "uri": "spotify:artist:2T1yhT2K3iSI8vwAdOS9O0"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/778A8QJMXVPaCnGwOlAK3y"
+            },
+            "href": "https://api.spotify.com/v1/albums/778A8QJMXVPaCnGwOlAK3y",
+            "id": "778A8QJMXVPaCnGwOlAK3y",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2735664940a0319f3ca583a0210",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e025664940a0319f3ca583a0210",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048515664940a0319f3ca583a0210",
+                    "width": 64
+                }
+            ],
+            "name": "Ray Castro Presenta...Lo Mejor De Conjunto Clasico Con Tito Nieves",
+            "release_date": "2006-01-01",
+            "release_date_precision": "day",
+            "total_tracks": 10,
+            "type": "album",
+            "uri": "spotify:album:778A8QJMXVPaCnGwOlAK3y"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2T1yhT2K3iSI8vwAdOS9O0"
+                },
+                "href": "https://api.spotify.com/v1/artists/2T1yhT2K3iSI8vwAdOS9O0",
+                "id": "2T1yhT2K3iSI8vwAdOS9O0",
+                "name": "Conjunto Cl\u00e1sico",
+                "type": "artist",
+                "uri": "spotify:artist:2T1yhT2K3iSI8vwAdOS9O0"
+            },
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vOycwLXdkMMzpZW04VW5m"
+                },
+                "href": "https://api.spotify.com/v1/artists/4vOycwLXdkMMzpZW04VW5m",
+                "id": "4vOycwLXdkMMzpZW04VW5m",
+                "name": "Tito Nieves",
+                "type": "artist",
+                "uri": "spotify:artist:4vOycwLXdkMMzpZW04VW5m"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 252066,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USAK60610059"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/5DtgZDktHvgUPW6tfOWXm8"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5DtgZDktHvgUPW6tfOWXm8",
+        "id": "5DtgZDktHvgUPW6tfOWXm8",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Se\u00f1ora Ley",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/fd82f137bec29e200f947ea2bd1ca1bfb0d99673?cid=d04be567989d427e8ca8b0b27faa9bdc",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:5DtgZDktHvgUPW6tfOWXm8"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3nlpTZci9O5W8RsNoNH559"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/3nlpTZci9O5W8RsNoNH559",
+                    "id": "3nlpTZci9O5W8RsNoNH559",
+                    "name": "Juan Luis Guerra 4.40",
+                    "type": "artist",
+                    "uri": "spotify:artist:3nlpTZci9O5W8RsNoNH559"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/4u3f2d7j7SUlPh5dGaJf1v"
+            },
+            "href": "https://api.spotify.com/v1/albums/4u3f2d7j7SUlPh5dGaJf1v",
+            "id": "4u3f2d7j7SUlPh5dGaJf1v",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273d83eb5595a958fe30a4fb018",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02d83eb5595a958fe30a4fb018",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851d83eb5595a958fe30a4fb018",
+                    "width": 64
+                }
+            ],
+            "name": "Coleccion Cristiana",
+            "release_date": "2012-02-24",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:4u3f2d7j7SUlPh5dGaJf1v"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3nlpTZci9O5W8RsNoNH559"
+                },
+                "href": "https://api.spotify.com/v1/artists/3nlpTZci9O5W8RsNoNH559",
+                "id": "3nlpTZci9O5W8RsNoNH559",
+                "name": "Juan Luis Guerra 4.40",
+                "type": "artist",
+                "uri": "spotify:artist:3nlpTZci9O5W8RsNoNH559"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 195653,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USEL11100043"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/1oInQX1RuH1TcHuDv8Gvw3"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1oInQX1RuH1TcHuDv8Gvw3",
+        "id": "1oInQX1RuH1TcHuDv8Gvw3",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Las Avispas",
+        "popularity": 64,
+        "preview_url": null,
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:1oInQX1RuH1TcHuDv8Gvw3"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1aTDTChWWyiJH3SEnYrdVp"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/1aTDTChWWyiJH3SEnYrdVp",
+                    "id": "1aTDTChWWyiJH3SEnYrdVp",
+                    "name": "Taj Mahal",
+                    "type": "artist",
+                    "uri": "spotify:artist:1aTDTChWWyiJH3SEnYrdVp"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/0kEaFupzvrGdcczROS519i"
+            },
+            "href": "https://api.spotify.com/v1/albums/0kEaFupzvrGdcczROS519i",
+            "id": "0kEaFupzvrGdcczROS519i",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273cc837c65adffa13659a3bafe",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02cc837c65adffa13659a3bafe",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851cc837c65adffa13659a3bafe",
+                    "width": 64
+                }
+            ],
+            "name": "Taj Mahal",
+            "release_date": "1968",
+            "release_date_precision": "year",
+            "total_tracks": 8,
+            "type": "album",
+            "uri": "spotify:album:0kEaFupzvrGdcczROS519i"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1aTDTChWWyiJH3SEnYrdVp"
+                },
+                "href": "https://api.spotify.com/v1/artists/1aTDTChWWyiJH3SEnYrdVp",
+                "id": "1aTDTChWWyiJH3SEnYrdVp",
+                "name": "Taj Mahal",
+                "type": "artist",
+                "uri": "spotify:artist:1aTDTChWWyiJH3SEnYrdVp"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 289560,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USSM10004051"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/3E0VKSvZp76kvBU2WwwBul"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3E0VKSvZp76kvBU2WwwBul",
+        "id": "3E0VKSvZp76kvBU2WwwBul",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Leaving Trunk",
+        "popularity": 59,
+        "preview_url": "https://p.scdn.co/mp3-preview/4b30d70e87c5182785ed7dba734f0195cfc7f2df?cid=d04be567989d427e8ca8b0b27faa9bdc",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3E0VKSvZp76kvBU2WwwBul"
+    },
+    {
+        "album": {
+            "album_type": "SINGLE",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U",
+                    "id": "4LLpKhyESsyAXpc4laK94U",
+                    "name": "Mac Miller",
+                    "type": "artist",
+                    "uri": "spotify:artist:4LLpKhyESsyAXpc4laK94U"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/6eFkuEfykAUpthUiUeu3zw"
+            },
+            "href": "https://api.spotify.com/v1/albums/6eFkuEfykAUpthUiUeu3zw",
+            "id": "6eFkuEfykAUpthUiUeu3zw",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273abe13c3228acc0aa278fa4dc",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02abe13c3228acc0aa278fa4dc",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851abe13c3228acc0aa278fa4dc",
+                    "width": 64
+                }
+            ],
+            "name": "Donald Trump - Single",
+            "release_date": "2011-05-17",
+            "release_date_precision": "day",
+            "total_tracks": 2,
+            "type": "album",
+            "uri": "spotify:album:6eFkuEfykAUpthUiUeu3zw"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U",
+                "id": "4LLpKhyESsyAXpc4laK94U",
+                "name": "Mac Miller",
+                "type": "artist",
+                "uri": "spotify:artist:4LLpKhyESsyAXpc4laK94U"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 165908,
+        "explicit": true,
+        "external_ids": {
+            "isrc": "USA2P1173908"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/3uulVrxiI7iLTjOBZsaiF8"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3uulVrxiI7iLTjOBZsaiF8",
+        "id": "3uulVrxiI7iLTjOBZsaiF8",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Donald Trump",
+        "popularity": 66,
+        "preview_url": "https://p.scdn.co/mp3-preview/2698b29837bdc2531324f0ab612572991b8a647d?cid=d04be567989d427e8ca8b0b27faa9bdc",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3uulVrxiI7iLTjOBZsaiF8"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5fsDcuclIe8ZiBD5P787K1"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/5fsDcuclIe8ZiBD5P787K1",
+                    "id": "5fsDcuclIe8ZiBD5P787K1",
+                    "name": "Stevie Ray Vaughan",
+                    "type": "artist",
+                    "uri": "spotify:artist:5fsDcuclIe8ZiBD5P787K1"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/5vxBOzakDbJleNA1rbA7FQ"
+            },
+            "href": "https://api.spotify.com/v1/albums/5vxBOzakDbJleNA1rbA7FQ",
+            "id": "5vxBOzakDbJleNA1rbA7FQ",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273eb72e98b6e645a68cdfe72a4",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02eb72e98b6e645a68cdfe72a4",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851eb72e98b6e645a68cdfe72a4",
+                    "width": 64
+                }
+            ],
+            "name": "Couldn't Stand The Weather (Legacy Edition)",
+            "release_date": "1984",
+            "release_date_precision": "year",
+            "total_tracks": 32,
+            "type": "album",
+            "uri": "spotify:album:5vxBOzakDbJleNA1rbA7FQ"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5fsDcuclIe8ZiBD5P787K1"
+                },
+                "href": "https://api.spotify.com/v1/artists/5fsDcuclIe8ZiBD5P787K1",
+                "id": "5fsDcuclIe8ZiBD5P787K1",
+                "name": "Stevie Ray Vaughan",
+                "type": "artist",
+                "uri": "spotify:artist:5fsDcuclIe8ZiBD5P787K1"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 144826,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USSM19932783"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/49iIPiiQb6MALjzlIy6k33"
+        },
+        "href": "https://api.spotify.com/v1/tracks/49iIPiiQb6MALjzlIy6k33",
+        "id": "49iIPiiQb6MALjzlIy6k33",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Wham",
+        "popularity": 30,
+        "preview_url": "https://p.scdn.co/mp3-preview/5df30e6752c54ace7aac6c774c7fc24d2676469c?cid=d04be567989d427e8ca8b0b27faa9bdc",
+        "track_number": 16,
+        "type": "track",
+        "uri": "spotify:track:49iIPiiQb6MALjzlIy6k33"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6nnspeopmJAG07xOxHmqTu"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/6nnspeopmJAG07xOxHmqTu",
+                    "id": "6nnspeopmJAG07xOxHmqTu",
+                    "name": "El Gran Combo De Puerto Rico",
+                    "type": "artist",
+                    "uri": "spotify:artist:6nnspeopmJAG07xOxHmqTu"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/7GO5kZOp732nPbwGVsQePn"
+            },
+            "href": "https://api.spotify.com/v1/albums/7GO5kZOp732nPbwGVsQePn",
+            "id": "7GO5kZOp732nPbwGVsQePn",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273069e804f7e094d1adacf62e1",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02069e804f7e094d1adacf62e1",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851069e804f7e094d1adacf62e1",
+                    "width": 64
+                }
+            ],
+            "name": "25th Anniversary",
+            "release_date": "1987",
+            "release_date_precision": "year",
+            "total_tracks": 25,
+            "type": "album",
+            "uri": "spotify:album:7GO5kZOp732nPbwGVsQePn"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6nnspeopmJAG07xOxHmqTu"
+                },
+                "href": "https://api.spotify.com/v1/artists/6nnspeopmJAG07xOxHmqTu",
+                "id": "6nnspeopmJAG07xOxHmqTu",
+                "name": "El Gran Combo De Puerto Rico",
+                "type": "artist",
+                "uri": "spotify:artist:6nnspeopmJAG07xOxHmqTu"
+            }
+        ],
+        "disc_number": 2,
+        "duration_ms": 266400,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USMRE0850020"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/6GGv5bp9nsEQMYyguJfWyv"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6GGv5bp9nsEQMYyguJfWyv",
+        "id": "6GGv5bp9nsEQMYyguJfWyv",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Timbalero",
+        "popularity": 54,
+        "preview_url": "https://p.scdn.co/mp3-preview/23c7eb61081ae57fcaa6a1bbb67fe7dcfc0b870e?cid=d04be567989d427e8ca8b0b27faa9bdc",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:6GGv5bp9nsEQMYyguJfWyv"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/4wLXwxDeWQ8mtUIRPxGiD6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/4wLXwxDeWQ8mtUIRPxGiD6",
+                    "id": "4wLXwxDeWQ8mtUIRPxGiD6",
+                    "name": "Marc Anthony",
+                    "type": "artist",
+                    "uri": "spotify:artist:4wLXwxDeWQ8mtUIRPxGiD6"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/6vBpLg3T8bojcqzoKI6m0R"
+            },
+            "href": "https://api.spotify.com/v1/albums/6vBpLg3T8bojcqzoKI6m0R",
+            "id": "6vBpLg3T8bojcqzoKI6m0R",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27321be16e998effa9f1f4b63a9",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0221be16e998effa9f1f4b63a9",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485121be16e998effa9f1f4b63a9",
+                    "width": 64
+                }
+            ],
+            "name": "3.0",
+            "release_date": "2013-07-23",
+            "release_date_precision": "day",
+            "total_tracks": 10,
+            "type": "album",
+            "uri": "spotify:album:6vBpLg3T8bojcqzoKI6m0R"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4wLXwxDeWQ8mtUIRPxGiD6"
+                },
+                "href": "https://api.spotify.com/v1/artists/4wLXwxDeWQ8mtUIRPxGiD6",
+                "id": "4wLXwxDeWQ8mtUIRPxGiD6",
+                "name": "Marc Anthony",
+                "type": "artist",
+                "uri": "spotify:artist:4wLXwxDeWQ8mtUIRPxGiD6"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 271706,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USSD11300188"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/7DqCwFrRTSuLIrBCI3qNPn"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7DqCwFrRTSuLIrBCI3qNPn",
+        "id": "7DqCwFrRTSuLIrBCI3qNPn",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Hipocres\u00eda",
+        "popularity": 58,
+        "preview_url": "https://p.scdn.co/mp3-preview/4e5557dfbb31da6da0e37122c6a16ff1e4bf5ece?cid=d04be567989d427e8ca8b0b27faa9bdc",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:7DqCwFrRTSuLIrBCI3qNPn"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2iojnBLj0qIMiKPvVhLnsH"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2iojnBLj0qIMiKPvVhLnsH",
+                    "id": "2iojnBLj0qIMiKPvVhLnsH",
+                    "name": "Trey Songz",
+                    "type": "artist",
+                    "uri": "spotify:artist:2iojnBLj0qIMiKPvVhLnsH"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/6tipnwV81Zqn7SM5FSsyvh"
+            },
+            "href": "https://api.spotify.com/v1/albums/6tipnwV81Zqn7SM5FSsyvh",
+            "id": "6tipnwV81Zqn7SM5FSsyvh",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ab2c2f2ec038444298aafd5f",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ab2c2f2ec038444298aafd5f",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ab2c2f2ec038444298aafd5f",
+                    "width": 64
+                }
+            ],
+            "name": "Chapter V",
+            "release_date": "2012-08-17",
+            "release_date_precision": "day",
+            "total_tracks": 18,
+            "type": "album",
+            "uri": "spotify:album:6tipnwV81Zqn7SM5FSsyvh"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2iojnBLj0qIMiKPvVhLnsH"
+                },
+                "href": "https://api.spotify.com/v1/artists/2iojnBLj0qIMiKPvVhLnsH",
+                "id": "2iojnBLj0qIMiKPvVhLnsH",
+                "name": "Trey Songz",
+                "type": "artist",
+                "uri": "spotify:artist:2iojnBLj0qIMiKPvVhLnsH"
+            },
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4OBJLual30L7gRl5UkeRcT"
+                },
+                "href": "https://api.spotify.com/v1/artists/4OBJLual30L7gRl5UkeRcT",
+                "id": "4OBJLual30L7gRl5UkeRcT",
+                "name": "T.I.",
+                "type": "artist",
+                "uri": "spotify:artist:4OBJLual30L7gRl5UkeRcT"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 197626,
+        "explicit": true,
+        "external_ids": {
+            "isrc": "USAT21202601"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/4F9ugjLElOmZgRMXAFZvwW"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4F9ugjLElOmZgRMXAFZvwW",
+        "id": "4F9ugjLElOmZgRMXAFZvwW",
+        "is_local": false,
+        "is_playable": true,
+        "name": "2 Reasons (feat. T.I.)",
+        "popularity": 39,
+        "preview_url": "https://p.scdn.co/mp3-preview/68cc84155215d5bfa06cbbf9ac6e73a23203843d?cid=d04be567989d427e8ca8b0b27faa9bdc",
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:4F9ugjLElOmZgRMXAFZvwW"
+    },
+    {
+        "album": {
+            "album_type": "ALBUM",
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0VqJzfntEbQjjuCWyDfpZa"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/0VqJzfntEbQjjuCWyDfpZa",
+                    "id": "0VqJzfntEbQjjuCWyDfpZa",
+                    "name": "Albert King with Stevie Ray Vaughan",
+                    "type": "artist",
+                    "uri": "spotify:artist:0VqJzfntEbQjjuCWyDfpZa"
+                }
+            ],
+            "external_urls": {
+                "spotify": "https://open.spotify.com/album/62rUsLpP1lxJ1gJUiXJJI4"
+            },
+            "href": "https://api.spotify.com/v1/albums/62rUsLpP1lxJ1gJUiXJJI4",
+            "id": "62rUsLpP1lxJ1gJUiXJJI4",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2731175d75f7c4fd34ec2f5a2c6",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e021175d75f7c4fd34ec2f5a2c6",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048511175d75f7c4fd34ec2f5a2c6",
+                    "width": 64
+                }
+            ],
+            "name": "In Session (Remaster w/ eBooklet)",
+            "release_date": "1999",
+            "release_date_precision": "year",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:62rUsLpP1lxJ1gJUiXJJI4"
+        },
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5aygfDCEaX5KTZOxSCpT9o"
+                },
+                "href": "https://api.spotify.com/v1/artists/5aygfDCEaX5KTZOxSCpT9o",
+                "id": "5aygfDCEaX5KTZOxSCpT9o",
+                "name": "Albert King",
+                "type": "artist",
+                "uri": "spotify:artist:5aygfDCEaX5KTZOxSCpT9o"
+            },
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5fsDcuclIe8ZiBD5P787K1"
+                },
+                "href": "https://api.spotify.com/v1/artists/5fsDcuclIe8ZiBD5P787K1",
+                "id": "5fsDcuclIe8ZiBD5P787K1",
+                "name": "Stevie Ray Vaughan",
+                "type": "artist",
+                "uri": "spotify:artist:5fsDcuclIe8ZiBD5P787K1"
+            }
+        ],
+        "disc_number": 1,
+        "duration_ms": 540573,
+        "explicit": false,
+        "external_ids": {
+            "isrc": "USC4R0919641"
+        },
+        "external_urls": {
+            "spotify": "https://open.spotify.com/track/0v6tG0HoAHiluZAeany7oU"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0v6tG0HoAHiluZAeany7oU",
+        "id": "0v6tG0HoAHiluZAeany7oU",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Call It Stormy Monday",
+        "popularity": 45,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0v6tG0HoAHiluZAeany7oU"
+    }
+]
