@@ -7,10 +7,6 @@ import random
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy.util as util
 
-os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
-os.environ["SPOTIPY_CLIENT_SECRET"]= "07721eeec6e1493f80a52f79335f1a12"
-os.environ["SPOTIPY_REDIRECT_URI"] = "http://127.0.0.1:8000/index.html"
-
 username = ''
 token = util.prompt_for_user_token(username)
 
@@ -141,7 +137,7 @@ happy_song_name_info = rec.get_song_name_list(rec.happy_recommender())
 # sad = recommendation.sad_recommender()
 # anger = recommendation.anger_recommender()
 # relaxed = recommendation.relaxed_recommender()
-print(token)
+
 print(happy_song_name_info)
 
 

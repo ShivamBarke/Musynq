@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,6 +82,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'SPOTIPY_CLIENT_ID' : env('SPOTIPY_CLIENT_ID'),
+        'SPOTIPY_CLIENT_SECRET' : env('SPOTIPY_CLIENT_SECRET'),
+        'SPOTIPY_REDIRECT_URI' : env('SPOTIPY_REDIRECT_URI')
     }
 }
 
