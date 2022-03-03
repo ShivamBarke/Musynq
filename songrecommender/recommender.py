@@ -2,21 +2,18 @@
 # Needs Code optimisation in making one function for mood_recommender() instead of having to make 4 different functions.
 
 import spotipy
-import os
 import random
+import os
+import environ
 from spotipy.oauth2 import SpotifyClientCredentials
-import spotipy.util as util
+import accesstoken
 
-username = ''
-token = util.prompt_for_user_token(username)
+os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
+os.environ["SPOTIPY_CLIENT_SECRET"]= "07721eeec6e1493f80a52f79335f1a12"
+os.environ["SPOTIPY_REDIRECT_URI"] = "http://127.0.0.1:8000/index.html"
 
-try : 
-    token = util.prompt_for_user_token(username)
-except :
-    os.remove(f'.cache-{username}')
-    token = util.prompt_for_user_token(username)
-
-sp = spotipy.Spotify(auth= token)
+token = accesstoken.get_token()
+sp = spotipy.Spotify(auth = token)
 auth_manager = spotipy.SpotifyClientCredentials()
 
 Happy = ['hip hop', 'classical',' edm' ,'blues', 'country', 'funk', 'disco','love songs',' latino',' dubstep', 'punk', 'punk-rock' , 
