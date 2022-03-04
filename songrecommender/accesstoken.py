@@ -23,6 +23,7 @@ authorize = oauth.SpotifyOAuth(scope=scopes)
 
 def get_token():
     token = authorize.get_access_token()
+    # ALTERNATIVE METHOD
     # username = ''
     # token = util.prompt_for_user_token(username)
 
