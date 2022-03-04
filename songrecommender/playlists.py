@@ -1,5 +1,4 @@
 # Creates the playlists 
-# Under development
 # To create a playlist for a user, Scopes have to be defined for the accesstoken.
 # json.dumps(current_user, indent = 2)
 
