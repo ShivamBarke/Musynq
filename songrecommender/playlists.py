@@ -42,7 +42,7 @@ class Playlists:
         return added_playlist
 
 playlists = Playlists()
-print(playlists.add_playlist(pl_name = 'First Musynq playlist ever', 
-                                mood = rec.Happy,
-                                energy = 0.7,
-                                valence = 0.8))
+print(playlists.add_playlist(pl_name = 'Suhita created this playlist', 
+                                mood = rec.Sad,
+                                energy = 0.6,
+                                valence = 0.4))
