@@ -1,7 +1,7 @@
 # Creates the playlists 
 # To create a playlist for a user, Scopes have to be defined for the accesstoken.
 # json.dumps(current_user, indent = 2)
-
+# DO NOT FUCKING DARE TO TOUCH THIS
 
 from spotipy import SpotifyClientCredentials
 import accesstoken
@@ -23,7 +23,14 @@ class Playlists:
         current_user = sp.current_user()
         user_id = current_user['id']
         return user_id
-    
+
+    # def create_playlist(self, pl_name):
+    #     create = sp.user_playlist_create(Playlists.get_user_id(), pl_name)
+    #     return create
+
+    # def get_playlist():
+        
+    #     pass
     # successfully creates a playlist IMMA CRYYYY FOR REALLLLL
     def add_playlist(self, pl_name:str, mood:list, energy:float, valence:float):
         create = sp.user_playlist_create(Playlists.get_user_id(), pl_name)
