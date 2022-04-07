@@ -11,7 +11,7 @@ import spotipy
 from recommender import Recommender as rec
 
 os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
-os.environ["SPOTIPY_CLIENT_SECRET"]= "07721eeec6e1493f80a52f79335f1a12"
+os.environ["SPOTIPY_CLIENT_SECRET"]= "66c4769463364b50b88804f7013c95df"
 os.environ["SPOTIPY_REDIRECT_URI"] = "http://127.0.0.1:5500/index.html"
 
 token = accesstoken.get_token()
@@ -41,8 +41,8 @@ class Playlists:
         added_playlist = sp.playlist_add_items(playlist_id, songs_id)
         return added_playlist
 
-playlists = Playlists()
-print(playlists.add_playlist(pl_name = 'Suhita created this playlist', 
+pl = Playlists()
+print(pl.add_playlist(pl_name = 'playlist name take as input', 
                                 mood = rec.Sad,
-                                energy = 0.6,
+                                energy = 0.6,   
                                 valence = 0.4))

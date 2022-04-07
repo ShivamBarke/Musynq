@@ -1,6 +1,9 @@
 .env
 .cache
-__pycache__/
+Musynq/__pycache__/
+Questionnaire/__pycache__/
+Questionnaire/migrations/
 .vscode/
 assets/
 db.sqlite3
+.venv/

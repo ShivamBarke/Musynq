@@ -1,15 +1,17 @@
 # this file recommends songs based on the mood. 
 # Needs Code optimisation in making one function for mood_recommender() instead of having to make 4 different functions.
 
-import spotipy
-import random
 import os
+import random
+
 import environ
+import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+
 import accesstoken
 
 os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
-os.environ["SPOTIPY_CLIENT_SECRET"]= "07721eeec6e1493f80a52f79335f1a12"
+os.environ["SPOTIPY_CLIENT_SECRET"]= "66c4769463364b50b88804f7013c95df"
 os.environ["SPOTIPY_REDIRECT_URI"] = "http://127.0.0.1:8000/index.html"
 
 token = accesstoken.get_token()
@@ -18,7 +20,6 @@ auth_manager = spotipy.SpotifyClientCredentials()
 
 song_name_list = []
 song_id_list = []
-
 
 class Recommender():
     # Selects random song genres from above defined lists i.e happy sad angry relax
