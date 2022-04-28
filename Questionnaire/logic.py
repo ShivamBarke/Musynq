@@ -27,11 +27,11 @@ class questions:
     def __init__(self) -> None:
         pass
 
-    def show_questions(self,QN):
-        return questions.QUESTIONS[QN-1]
+    # def show_questions(self,QN):
+    #     return questions.QUESTIONS[QN-1]
     
-    def show_options(self):
-        return questions.OPTIONS
+    # def show_options(self):
+    #     return questions.OPTIONS
     
     def get_answer(self,QN):
         statement = f"SELECT question{QN} FROM Questionnaire_questionnaire WHERE userid={questions.UserID}"
@@ -55,12 +55,3 @@ class questions:
     
     def get_mood(self):
         pass
-
-
-magz = questions()
-QN = 2
-questions.UserID = QN
-print(magz.show_questions(QN))
-print(magz.show_options())
-print(magz.get_answer(QN))
-print(magz.xcalculate(QN))

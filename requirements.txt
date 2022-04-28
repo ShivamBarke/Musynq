@@ -3,10 +3,14 @@ backports.zoneinfo==0.2.1
 certifi==2021.10.8
 charset-normalizer==2.0.12
 Django==4.0.3
+django-cors-headers==3.11.0
 django-environ==0.8.1
 djangorestframework==3.13.1
 environ==1.0
 idna==3.3
+numpy==1.22.3
+pandas==1.4.2
+python-dateutil==2.8.2
 pytz==2022.1
 requests==2.27.1
 six==1.16.0
