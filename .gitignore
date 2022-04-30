@@ -1,0 +1,8 @@
+.env
+.cache
+Musynq/__pycache__/
+Questionnaire/__pycache__/
+Questionnaire/migrations/
+.vscode/
+assets/
+.venv/
