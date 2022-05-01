@@ -1,19 +1,19 @@
-from django.shortcuts import render
 from .models import Questionnaire ,XWeightage, YWeightage
 from .serializers import QuestionnaireSerializer, XWeightageSerializer , YWeightageSerializer
-from rest_framework import viewsets
+from rest_framework import generics, status
+from rest_framework.views import APIView
 
 # Create your views here.
 
-class QuestionnaireViewSet(viewsets.ModelViewSet):
-    queryset = Questionnaire.objects.all().order_by('userid')
+class QuestionnaireView(generics.ListAPIView):
+    queryset = Questionnaire.objects.all()
     serializer_class = QuestionnaireSerializer
 
-class XWeightageViewSet(viewsets.ModelViewSet):
-    queryset = XWeightage.objects.all().order_by('QuestionNumber')
+class XWeightageView(APIView):
+    queryset = XWeightage.objects.all()
     serializer_class = XWeightageSerializer
 
-class YWeightageViewSet(viewsets.ModelViewSet):
-    queryset = YWeightage.objects.all().order_by('QuestionNumber')
+class YWeightageView(APIView):
+    queryset = YWeightage.objects.all()
     serializer_class = YWeightageSerializer
 

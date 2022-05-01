@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'songrecommender',
-    'rest_framework',
-    'Questionnaire',
-    'corsheaders'
+    'songrecommender.apps.SongrecommenderConfig',
+    'Questionnaire.apps.QuestionnaireConfig',
+    'corsheaders',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [

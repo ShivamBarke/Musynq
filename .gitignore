@@ -6,3 +6,4 @@ Questionnaire/migrations/
 .vscode/
 assets/
 .venv/
+db.sqlite3

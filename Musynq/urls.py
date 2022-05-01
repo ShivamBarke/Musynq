@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # use urajs react code for home page
     path('', include('songrecommender.urls')),
     path('admin/', admin.site.urls),
     path('questionnaire/',include('Questionnaire.urls'))

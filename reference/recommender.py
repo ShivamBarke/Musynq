@@ -4,15 +4,14 @@
 import os
 import random
 
-import environ
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-import accesstoken
+from ..reference import accesstoken
 
 os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
 os.environ["SPOTIPY_CLIENT_SECRET"]= "66c4769463364b50b88804f7013c95df"
-os.environ["SPOTIPY_REDIRECT_URI"] = "http://127.0.0.1:8000/index.html"
+os.environ["SPOTIPY_REDIRECT_URI"] = "http://localhost:3000/"
 
 token = accesstoken.get_token()
 sp = spotipy.Spotify(auth = token)
@@ -66,11 +65,17 @@ class Recommender():
         )
         return recommend.get('tracks')
 
-# Sample for calling the recommender function.        
+# # Sample for calling the recommender function.        
 # rec = Recommender()
 # # happy = list(rec.Happy)
+
+# # gets random 5 playlists from the available playlist categorised in the Happy, Sad etc.
 # mood = rec.random_selector(rec.Happy)
+
+# # generated mood wise songs using moodtracks, energy, valence as parameters
 # happy_tracks= list(rec.mood_recommender(mood, 0.7, 0.6))
+
+
 # mood_song_id_info = rec.get_song_id_list(happy_tracks)
 
-# print(mood_song_id_info)
+# # print(mood_song_id_info)
