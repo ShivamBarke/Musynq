@@ -1,6 +1,5 @@
 #this python files contains the the urls for the songrecommender app
 from django.urls import path, include
-from . import views
 from .views import AuthURL, spotify_callback, IsAuthenticated
 
 urlpatterns = [

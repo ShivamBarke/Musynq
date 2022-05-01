@@ -4,7 +4,7 @@
 # DO NOT FUCKING DARE TO TOUCH THIS
 
 from spotipy import SpotifyClientCredentials
-from ..reference import accesstoken
+from . import accesstoken
 import json
 import os
 import spotipy 

@@ -7,7 +7,7 @@ from rest_framework.response import Response
 import spotipy.oauth2 as oauth
 from requests import Request, post
 from .credentials import REDIRECT_URI, CLIENT_SECRET, CLIENT_ID
-from .util import update_or_create_user_tokens, is_spotify_authenticated, get_user_tokens, execute_spotify_api_call
+from .util import update_or_create_user_tokens, is_spotify_authenticated
 
 
 # token = accesstoken.get_token()
@@ -58,7 +58,7 @@ class IsAuthenticated(APIView):
         is_authenticated = is_spotify_authenticated(
             self.request.session.session_key)
         return Response({'status': is_authenticated}, status=status.HTTP_200_OK)  
-        
+
 # class MusynqUserView(APIView):
 #     queryset = MusynqUser.objects.all()
 #     serializer_class = MusynqUserSerializer

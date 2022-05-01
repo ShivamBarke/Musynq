@@ -7,7 +7,7 @@ import random
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-from ..reference import accesstoken
+from . import accesstoken
 
 os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
 os.environ["SPOTIPY_CLIENT_SECRET"]= "66c4769463364b50b88804f7013c95df"
