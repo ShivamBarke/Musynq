@@ -2,7 +2,10 @@ from .models import SpotifyToken
 from django.utils import timezone
 from datetime import timedelta
 from .credentials import CLIENT_ID, CLIENT_SECRET
-from requests import post, put, get
+from requests import post, put, get, session
+
+
+BASE_URL = "https://api.spotify.com/v1"
 
 def get_user_tokens(session_id):
     user_tokens = SpotifyToken.objects.filter(user=session_id)
@@ -57,3 +60,32 @@ def refresh_spotify_token(session_id):
 
     update_or_create_user_tokens(
         session_id, access_token, token_type, expires_in, refresh_token)
+
+
+def execute_spotify_api_request(session_id, endpoint, post_=False, put_=False):
+    tokens = get_user_tokens(session_id)
+    headers = {'Content-Type': 'application/json',
+               'Authorization': "Bearer " + tokens.access_token}
+
+    if post_:
+        post(BASE_URL + endpoint, headers=headers)
+    elif put_:
+        put(BASE_URL + endpoint, headers=headers)
+    else : 
+        response = get(BASE_URL + endpoint, {}, headers=headers)
+    try:
+        return response.json()
+    except:
+        return {'Error': 'Issue with request'}
+
+def get_spotify_id(session_id):
+    endpoint = ""
+    response = execute_spotify_api_request(session_id=session_id,endpoint=endpoint)
+    spotify_id = response.get('id')
+    return spotify_id
+
+def create_playlist(session_id):
+    user_id = get_spotify_id(session_id)
+    endpoint = f"/users/{user_id}/playlists"
+    response = execute_spotify_api_request(session_id=session_id, endpoint=endpoint, post_=True)
+     

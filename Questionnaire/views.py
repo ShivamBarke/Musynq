@@ -11,9 +11,9 @@ class QuestionnaireView(generics.ListAPIView):
     queryset = Questionnaire.objects.all()
     serializer_class = QuestionnaireSerializer
 
-    def post(self, request, format=None):
-        response = post()
-        return 
+    # def post(self, request, format=None):
+    #     response = post()
+    #     return 
 
 class PostAnswerView(APIView):
     serializer_class = PostAnswerSerializer
@@ -21,7 +21,9 @@ class PostAnswerView(APIView):
     def post(self, request, format=None):
         if not request.session.exists(request.session.session_key):
             request.session.create()
+
         serializer = self.serializer_class(data=request.data)
+        
         if serializer.is_valid():
             question1 = serializer.data.get('question1')
             question2 = serializer.data.get('question2')
@@ -55,7 +57,7 @@ class PostAnswerView(APIView):
                 answer = Questionnaire(userid=userid,question1=question1,question2=question2,question3=question3,question4=question4,question5=question5,question6=question6,question7=question7,question8=question8,question9=question9,question10=question10)
                 answer.save()
                 return Response(PostAnswerSerializer(answer).data, status = status.HTTP_201_CREATED)
-                
+
         return Response({'Bad Request': 'Invalid data...'}, status=status.HTTP_400_BAD_REQUEST)
 
 

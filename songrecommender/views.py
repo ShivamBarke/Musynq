@@ -7,8 +7,8 @@ from rest_framework.response import Response
 import spotipy.oauth2 as oauth
 from requests import Request, post
 from .credentials import REDIRECT_URI, CLIENT_SECRET, CLIENT_ID
-from .util import update_or_create_user_tokens, is_spotify_authenticated
-
+from .util import *
+from Questionnaire.models import Questionnaire
 
 # token = accesstoken.get_token()
 # pl = Playlists()
@@ -57,7 +57,25 @@ class IsAuthenticated(APIView):
     def get(self, request, format=None):
         is_authenticated = is_spotify_authenticated(
             self.request.session.session_key)
-        return Response({'status': is_authenticated}, status=status.HTTP_200_OK)  
+        return Response({'status': is_authenticated}, status=status.HTTP_200_OK)
+    
+class RecommendSongs(APIView):
+    def get(self, request, format=None):
+        userid = self.request.session.session_key
+        user = SpotifyToken.objects.filter(user=userid)
+        if user.exists():
+            user = user[0]
+        else: 
+            return Response({}, status = status.HTTP_404_NOT_FOUND)
+        
+        spotify_id = get_spotify_id(userid)
+        
+        response = {
+            'spotify_id': spotify_id,
+
+        }
+
+        return Response(response, status = status.HTTP_200_OK)
 
 # class MusynqUserView(APIView):
 #     queryset = MusynqUser.objects.all()
