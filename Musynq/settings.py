@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'songrecommender.apps.SongrecommenderConfig',
     'Questionnaire.apps.QuestionnaireConfig',
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
+    'frontend'
 ]
 
 MIDDLEWARE = [

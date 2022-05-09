@@ -7,11 +7,11 @@ import random
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-from . import accesstoken
+import accesstoken
 
 os.environ["SPOTIPY_CLIENT_ID"] = "d04be567989d427e8ca8b0b27faa9bdc"
 os.environ["SPOTIPY_CLIENT_SECRET"]= "66c4769463364b50b88804f7013c95df"
-os.environ["SPOTIPY_REDIRECT_URI"] = "http://localhost:3000/"
+os.environ["SPOTIPY_REDIRECT_URI"] = "http://localhost:8000/"
 
 token = accesstoken.get_token()
 sp = spotipy.Spotify(auth = token)
@@ -79,3 +79,4 @@ class Recommender():
 # mood_song_id_info = rec.get_song_id_list(happy_tracks)
 
 # # print(mood_song_id_info)
+print(sp)

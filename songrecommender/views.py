@@ -1,3 +1,4 @@
+from audioop import add
 from django.shortcuts import render , redirect
 from rest_framework import generics, status
 from rest_framework.views import APIView
@@ -12,6 +13,10 @@ from Questionnaire.models import Questionnaire
 
 # token = accesstoken.get_token()
 # pl = Playlists()
+
+
+
+ 
 
 class AuthURL(APIView):
     def get(self, request, fornat=None):
@@ -60,18 +65,32 @@ class IsAuthenticated(APIView):
         return Response({'status': is_authenticated}, status=status.HTTP_200_OK)
     
 class RecommendSongs(APIView):
+    Happy = ['hip hop', 'classical',' edm' ,'blues', 'country', 'funk', 'disco','love songs',' latino',' dubstep', 'punk', 'punk-rock' , 
+            'heavy metal' , 'rock', 'rock-n-roll' ,'party','synth-pop', 'salsa', 'samba' ,'guitar', 'happy','alt-rock','indie', 'indie-pop','trance']
+
+    Sad = ['classical', 'broadway', 'blues','chill','sad','club', 'comedy']
+
+    Relaxed= ['classical' , 'new age', 'love songs', 'jazz',' latino', ' chill',' work-out','road-trip', 'opera', 'sleep','acoustic','hip-hop', 'holidays','movies','trance','drum-and-bass','new-age','club', 'comedy']
+
+    Anger= ['reggae' ,'club', 'death -metal','drum-and-bass',' dub', 'dubstep', 'edm', 'electro', 'electronic', 'emo','heavy metal','alt-rock','drum-and-bass'] 
+    
+    # underconstruction, do not use
+
     def get(self, request, format=None):
         userid = self.request.session.session_key
         user = SpotifyToken.objects.filter(user=userid)
+        pl_name = ''
         if user.exists():
             user = user[0]
         else: 
             return Response({}, status = status.HTTP_404_NOT_FOUND)
         
         spotify_id = get_spotify_id(userid)
+        # added_songs = add_songs(session_id=userid, pl_name=f"Musynq-{userid}", RecommendSongs.Happy,)
         
         response = {
             'spotify_id': spotify_id,
+            
 
         }
 
