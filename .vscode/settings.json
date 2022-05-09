@@ -1,5 +1,11 @@
 {
     "git.ignoreLimitWarning": true,
     "jupyter.jupyterServerType": "local",
-    "python.pythonPath" : "/home/dazkool/.local/share/virtualenvs/Musynq-GUylKlVI/bin/python"
+    "python.pythonPath" : "/home/dazkool/.local/share/virtualenvs/Musynq-GUylKlVI/bin/python",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+        "[Default Dark+]": {
+            "enabled": true // enable for a particular theme
+        }
+    }
 }

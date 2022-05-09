@@ -1,11 +1,10 @@
 #this python files contains the the urls for the songrecommender app
-from django.urls import path, include
-from rest_framework import routers
-from . import views
+from django.urls import path
+from .views import AuthURL, RecommendSongs, spotify_callback, IsAuthenticated
 
-router = routers.DefaultRouter()
-router.register(r'MusynqUser', views.MusynqUserViewSet)
 urlpatterns = [
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls',namespace='rest_framework'))
+    path('get-auth-url', AuthURL.as_view()),
+    path('redirect', spotify_callback),
+    path('is-authenticated', IsAuthenticated.as_view()),
+    path('recommend-songs', RecommendSongs.as_view())
 ]

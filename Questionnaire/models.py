@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Questionnaire(models.Model):
     OPTIONS = (('SD','Strongly Disagree'), ('D','Disagree'), ("CS","Can't Say"),('A','Agree'), ('SA','Strongly Agree'))
-    userid = models.IntegerField(default=0)
+    userid = models.CharField(max_length=50)
     question1 = models.CharField(max_length=15,choices=OPTIONS, default='3')
     question10 = models.CharField(max_length=15,choices=OPTIONS,default='3')
     question3 = models.CharField(max_length=15,choices=OPTIONS,default='3')
